@@ -9,7 +9,7 @@ async function insertTag() {
     // Get input from user
     const tag = await vscode.window.showInputBox({ prompt: "Enter in HTML tag" });
     // If tag is null or is empty, throw error
-    if (tag === null || tag === "") {
+    if (tag === null || tag === undefined || tag === "") {
         error("No empty tags permitted!");
         return;
     }

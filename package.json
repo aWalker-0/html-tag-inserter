@@ -3,6 +3,7 @@
   "displayName": "HTML Tag Inserter",
   "description": "A HTML tag inserter that will work for any language.",
   "version": "0.0.1",
+  "repository": {"url": "https://github.com/aWalker-0/html-tag-inserter"},
   "engines": {
     "vscode": "^1.72.0"
   },

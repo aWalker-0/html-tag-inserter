@@ -9,7 +9,7 @@ export async function insertTag() {
     // Get input from user
     const tag = await vscode.window.showInputBox({prompt: "Enter in HTML tag"});
     // If tag is null or is empty, throw error
-    if(tag === null || tag! === "") {
+    if(tag === null || tag === undefined || tag! === "") {
         error("No empty tags permitted!");
         return;
     }
@@ -30,6 +30,7 @@ export async function insertTag() {
 export function getInsertText(selection: string, tag: string) {
     // Define a regex patter
     const regexPattern = /(\w+).([A-Za-z])\w+=\"([^"]*)\"/;
+
     // Test pattern against the tag given
     if (regexPattern.test(tag)) {
         const t = tag.split(" ", 1);
